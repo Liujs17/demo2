@@ -1,0 +1,10 @@
+dataSources:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/stu
+    driver-class-name: com.mysql.jdbc.Driver
+
+demo2:
+    className: Java实训
+    count: 11
+    #student{name: liu age: 12}
