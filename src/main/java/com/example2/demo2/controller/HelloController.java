@@ -1,6 +1,6 @@
 package com.example2.demo2.controller;
 
-import com.example2.demo2.model.Teacher;
+import com.example2.demo2.entity.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

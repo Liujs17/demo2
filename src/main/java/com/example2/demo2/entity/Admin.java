@@ -9,8 +9,8 @@ import java.io.Serializable;
  * @author makejava
  * @since 2020-05-26 09:13:44
  */
-public class Admin implements Serializable {
-    private static final long serialVersionUID = 566419442585603486L;
+public class Admin{
+  //  private static final long serialVersionUID = 566419442585603486L;
     
     private Integer id;
     

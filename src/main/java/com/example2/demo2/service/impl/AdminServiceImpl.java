@@ -19,6 +19,11 @@ public class AdminServiceImpl implements AdminService {
     @Resource
     private AdminDao adminDao;
 
+    @Override
+    public Admin login(String account, String password) {
+        return adminDao.login(account,password);
+    }
+
     /**
      * 通过ID查询单条数据
      *

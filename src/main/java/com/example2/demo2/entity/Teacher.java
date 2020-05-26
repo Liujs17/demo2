@@ -1,10 +1,12 @@
-package com.example2.demo2.model;
+package com.example2.demo2.entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
 @Component
 @ConfigurationProperties(prefix = "demo2.teacher")
+@Validated
 public class Teacher {
 
     private String name;

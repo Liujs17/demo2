@@ -18,6 +18,8 @@ import java.util.List;
 @Repository
 public interface AdminDao {
 
+
+    Admin login(@Param("account") String account, @Param("password") String password);
     /**
      * 通过ID查询单条数据
      *
