@@ -1,25 +1,25 @@
 package com.example2.demo2.controller;
 
-import com.example2.demo2.entity.Stu;
-import com.example2.demo2.service.StuService;
+import com.example2.demo2.entity.Admin;
+import com.example2.demo2.service.AdminService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 /**
- * (Stu)表控制层
+ * (Admin)表控制层
  *
  * @author makejava
- * @since 2020-05-25 17:24:20
+ * @since 2020-05-26 09:13:48
  */
 @RestController
-@RequestMapping("stu")
-public class StuController {
+@RequestMapping("admin")
+public class AdminController {
     /**
      * 服务对象
      */
     @Resource
-    private StuService stuService;
+    private AdminService adminService;
 
     /**
      * 通过主键查询单条数据
@@ -28,8 +28,8 @@ public class StuController {
      * @return 单条数据
      */
     @GetMapping("selectOne")
-    public Stu selectOne(Integer id) {
-        return this.stuService.queryById(id);
+    public Admin selectOne(Integer id) {
+        return this.adminService.queryById(id);
     }
 
 }

@@ -1,15 +1,15 @@
 package com.example2.demo2.service;
 
-import com.example2.demo2.entity.Stu;
+import com.example2.demo2.entity.Admin;
 import java.util.List;
 
 /**
- * (Stu)表服务接口
+ * (Admin)表服务接口
  *
  * @author makejava
- * @since 2020-05-25 17:24:18
+ * @since 2020-05-26 09:13:46
  */
-public interface StuService {
+public interface AdminService {
 
     /**
      * 通过ID查询单条数据
@@ -17,7 +17,7 @@ public interface StuService {
      * @param id 主键
      * @return 实例对象
      */
-    Stu queryById(Integer id);
+    Admin queryById(Integer id);
 
     /**
      * 查询多条数据
@@ -26,23 +26,23 @@ public interface StuService {
      * @param limit 查询条数
      * @return 对象列表
      */
-    List<Stu> queryAllByLimit(int offset, int limit);
+    List<Admin> queryAllByLimit(int offset, int limit);
 
     /**
      * 新增数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 实例对象
      */
-    Stu insert(Stu stu);
+    Admin insert(Admin admin);
 
     /**
      * 修改数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 实例对象
      */
-    Stu update(Stu stu);
+    Admin update(Admin admin);
 
     /**
      * 通过主键删除数据

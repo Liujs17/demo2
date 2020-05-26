@@ -1,10 +1,20 @@
-dataSources:
-    username: root
-    password: root
-    url: jdbc:mysql://127.0.0.1:3306/stu
-    driver-class-name: com.mysql.jdbc.Driver
+spring:
+    application:
+        name: demo2
+
+    datasource:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/stu
+      driver-class-name: com.mysql.jdbc.Driver
 
 demo2:
     className: Java实训
     count: 11
-    #student{name: liu age: 12}
+    teacher: {name: liu, age: 12}
+
+server:
+    port: 8080
+
+#mybatis:
+#    mapper-locations: classpath:mapper/*.xml

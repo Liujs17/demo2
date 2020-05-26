@@ -4,13 +4,13 @@ import java.util.Date;
 import java.io.Serializable;
 
 /**
- * (Stu)实体类
+ * (Admin)实体类
  *
  * @author makejava
- * @since 2020-05-25 17:24:15
+ * @since 2020-05-26 09:13:44
  */
-public class Stu implements Serializable {
-    private static final long serialVersionUID = 165825843731835489L;
+public class Admin implements Serializable {
+    private static final long serialVersionUID = 566419442585603486L;
     
     private Integer id;
     
@@ -20,9 +20,9 @@ public class Stu implements Serializable {
     
     private String mobile;
     
-    private Date regData;
+    private Date regDate;
     
-    private Date lastLoginData;
+    private Date lastLoginDate;
     
     private Integer isAllow;
 
@@ -59,20 +59,20 @@ public class Stu implements Serializable {
         this.mobile = mobile;
     }
 
-    public Date getRegData() {
-        return regData;
+    public Date getRegDate() {
+        return regDate;
     }
 
-    public void setRegData(Date regData) {
-        this.regData = regData;
+    public void setRegDate(Date regDate) {
+        this.regDate = regDate;
     }
 
-    public Date getLastLoginData() {
-        return lastLoginData;
+    public Date getLastLoginDate() {
+        return lastLoginDate;
     }
 
-    public void setLastLoginData(Date lastLoginData) {
-        this.lastLoginData = lastLoginData;
+    public void setLastLoginDate(Date lastLoginDate) {
+        this.lastLoginDate = lastLoginDate;
     }
 
     public Integer getIsAllow() {

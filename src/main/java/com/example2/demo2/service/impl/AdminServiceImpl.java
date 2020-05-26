@@ -1,23 +1,23 @@
 package com.example2.demo2.service.impl;
 
-import com.example2.demo2.entity.Stu;
-import com.example2.demo2.dao.StuDao;
-import com.example2.demo2.service.StuService;
+import com.example2.demo2.entity.Admin;
+import com.example2.demo2.dao.AdminDao;
+import com.example2.demo2.service.AdminService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * (Stu)表服务实现类
+ * (Admin)表服务实现类
  *
  * @author makejava
- * @since 2020-05-25 17:24:20
+ * @since 2020-05-26 09:13:47
  */
-@Service("stuService")
-public class StuServiceImpl implements StuService {
+@Service("adminService")
+public class AdminServiceImpl implements AdminService {
     @Resource
-    private StuDao stuDao;
+    private AdminDao adminDao;
 
     /**
      * 通过ID查询单条数据
@@ -26,8 +26,8 @@ public class StuServiceImpl implements StuService {
      * @return 实例对象
      */
     @Override
-    public Stu queryById(Integer id) {
-        return this.stuDao.queryById(id);
+    public Admin queryById(Integer id) {
+        return this.adminDao.queryById(id);
     }
 
     /**
@@ -38,32 +38,32 @@ public class StuServiceImpl implements StuService {
      * @return 对象列表
      */
     @Override
-    public List<Stu> queryAllByLimit(int offset, int limit) {
-        return this.stuDao.queryAllByLimit(offset, limit);
+    public List<Admin> queryAllByLimit(int offset, int limit) {
+        return this.adminDao.queryAllByLimit(offset, limit);
     }
 
     /**
      * 新增数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 实例对象
      */
     @Override
-    public Stu insert(Stu stu) {
-        this.stuDao.insert(stu);
-        return stu;
+    public Admin insert(Admin admin) {
+        this.adminDao.insert(admin);
+        return admin;
     }
 
     /**
      * 修改数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 实例对象
      */
     @Override
-    public Stu update(Stu stu) {
-        this.stuDao.update(stu);
-        return this.queryById(stu.getId());
+    public Admin update(Admin admin) {
+        this.adminDao.update(admin);
+        return this.queryById(admin.getId());
     }
 
     /**
@@ -74,6 +74,6 @@ public class StuServiceImpl implements StuService {
      */
     @Override
     public boolean deleteById(Integer id) {
-        return this.stuDao.deleteById(id) > 0;
+        return this.adminDao.deleteById(id) > 0;
     }
 }

@@ -1,16 +1,22 @@
 package com.example2.demo2.dao;
 
-import com.example2.demo2.entity.Stu;
+import com.example2.demo2.entity.Admin;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+
 import java.util.List;
 
 /**
- * (Stu)表数据库访问层
+ * (Admin)表数据库访问层
  *
  * @author makejava
- * @since 2020-05-25 17:24:16
+ * @since 2020-05-26 09:13:45
  */
-public interface StuDao {
+@Mapper
+@Repository
+public interface AdminDao {
 
     /**
      * 通过ID查询单条数据
@@ -18,7 +24,7 @@ public interface StuDao {
      * @param id 主键
      * @return 实例对象
      */
-    Stu queryById(Integer id);
+    Admin queryById(Integer id);
 
     /**
      * 查询指定行数据
@@ -27,32 +33,32 @@ public interface StuDao {
      * @param limit 查询条数
      * @return 对象列表
      */
-    List<Stu> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
+    List<Admin> queryAllByLimit(@Param("offset") int offset, @Param("limit") int limit);
 
 
     /**
      * 通过实体作为筛选条件查询
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 对象列表
      */
-    List<Stu> queryAll(Stu stu);
+    List<Admin> queryAll(Admin admin);
 
     /**
      * 新增数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 影响行数
      */
-    int insert(Stu stu);
+    int insert(Admin admin);
 
     /**
      * 修改数据
      *
-     * @param stu 实例对象
+     * @param admin 实例对象
      * @return 影响行数
      */
-    int update(Stu stu);
+    int update(Admin admin);
 
     /**
      * 通过主键删除数据
